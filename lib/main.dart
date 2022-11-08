@@ -15,12 +15,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Sistema de banco (sacar)',
+      title: 'Projeto Enem',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.purple,
       ),
-      home: const MyHomePage(title: 'Sistema de banco'),
+      home: const MyHomePage(title: 'Projeto Enem'),
     );
   }
 }

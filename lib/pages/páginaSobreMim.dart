@@ -39,83 +39,138 @@ class _pagina_sobre_mimState extends State<pagina_sobre_mim> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Icon(
-                                Icons.account_circle,
-                                size: 50,
+                          Container(
+                            decoration: BoxDecoration(
+                              color: Color.fromARGB(199, 36, 34, 29),
+                              border: Border.all(
+                                color: Color.fromARGB(199, 36, 34, 29),
                               ),
-                              Text(
-                                " Alisson Alves \n-\n Desinger e assistente",
-                                style: TextStyle(fontSize: 25),
-                                textAlign: TextAlign.center,
-                              ),
-                            ],
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Icon(
+                                  Icons.videogame_asset,
+                                  size: 50,
+                                  color: Colors.white,
+                                ),
+                                Text(
+                                  " Alisson Alves \n-\n Desinger e assistente",
+                                  style: TextStyle(
+                                      fontSize: 25, color: Colors.white),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
                           ),
                           Image.asset("assets/images/sobremim/alisson.jpg"),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Icon(
-                                Icons.account_circle,
-                                size: 50,
+                          Container(
+                            decoration: BoxDecoration(
+                              color: Color.fromARGB(199, 36, 34, 29),
+                              border: Border.all(
+                                color: Color.fromARGB(199, 36, 34, 29),
                               ),
-                              Padding(padding: EdgeInsets.all(20)),
-                              Text(
-                                "Marcos Gabriel \n-\n Programador",
-                                style: TextStyle(fontSize: 25),
-                                textAlign: TextAlign.center,
-                              ),
-                            ],
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Icon(
+                                  Icons.pets,
+                                  size: 50,
+                                  color: Colors.white,
+                                ),
+                                Padding(padding: EdgeInsets.all(20)),
+                                Text(
+                                  "Marcos Gabriel \n-\n Programador",
+                                  style: TextStyle(
+                                      fontSize: 25, color: Colors.white),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
                           ),
                           Image.asset("assets/images/sobremim/marcos.jpg"),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Icon(
-                                Icons.account_circle,
-                                size: 50,
+                          Container(
+                            decoration: BoxDecoration(
+                              color: Color.fromARGB(199, 36, 34, 29),
+                              border: Border.all(
+                                color: Color.fromARGB(199, 36, 34, 29),
                               ),
-                              Padding(padding: EdgeInsets.all(20)),
-                              Text(
-                                "Arthur Kroenke \n-\n Programador",
-                                style: TextStyle(fontSize: 25),
-                                textAlign: TextAlign.center,
-                              ),
-                            ],
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Icon(
+                                  Icons.lightbulb_circle,
+                                  size: 50,
+                                  color: Colors.white,
+                                ),
+                                Padding(padding: EdgeInsets.all(20)),
+                                Text(
+                                  "Arthur Kroenke \n-\n Programador",
+                                  style: TextStyle(
+                                      fontSize: 25, color: Colors.white),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
                           ),
                           Image.asset("assets/images/sobremim/arthur.jpg"),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Icon(
-                                Icons.account_circle,
-                                size: 50,
+                          Container(
+                            decoration: BoxDecoration(
+                              color: Color.fromARGB(199, 36, 34, 29),
+                              border: Border.all(
+                                color: Color.fromARGB(199, 36, 34, 29),
                               ),
-                              Padding(padding: EdgeInsets.all(20)),
-                              Text(
-                                "Guilherme Paes \n-\n Programador",
-                                style: TextStyle(fontSize: 25),
-                                textAlign: TextAlign.center,
-                              ),
-                            ],
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Icon(
+                                  Icons.videogame_asset_off,
+                                  size: 50,
+                                  color: Colors.white,
+                                ),
+                                Padding(padding: EdgeInsets.all(20)),
+                                Text(
+                                  "Guilherme Paes \n-\n Programador",
+                                  style: TextStyle(
+                                      fontSize: 25, color: Colors.white),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
                           ),
                           Image.asset("assets/images/sobremim/guilherme.jpg"),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Icon(
-                                Icons.account_circle,
-                                size: 50,
+                          Container(
+                            decoration: BoxDecoration(
+                              color: Color.fromARGB(199, 36, 34, 29),
+                              border: Border.all(
+                                color: Color.fromARGB(199, 36, 34, 29),
                               ),
-                              Padding(padding: EdgeInsets.all(20)),
-                              Text(
-                                "João Pedro \n-\n Programador",
-                                style: TextStyle(fontSize: 25),
-                                textAlign: TextAlign.center,
-                              ),
-                            ],
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Icon(
+                                  Icons.soap,
+                                  size: 50,
+                                  color: Colors.white,
+                                ),
+                                Padding(padding: EdgeInsets.all(20)),
+                                Text(
+                                  "João Pedro \n-\n Programador",
+                                  style: TextStyle(
+                                      fontSize: 25, color: Colors.white),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
                           ),
                           Image.asset("assets/images/sobremim/joão.jpg"),
                         ],

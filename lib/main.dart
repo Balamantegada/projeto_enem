@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:projeto_enem/pages/p%C3%A1ginaCadastro.dart';
 import 'package:projeto_enem/pages/p%C3%A1ginaInicial.dart';
+import 'package:projeto_enem/pages/p%C3%A1ginaSobreMim.dart';
 
 void main() {
   runApp(const MyApp());
@@ -120,7 +121,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                             Navigator.of(context)
                                                 .push(MaterialPageRoute(
                                               builder: (context) =>
-                                                  pagina_cadastro(),
+                                                  pagina_sobre_mim(),
                                             ))
                                           }),
                                 ],

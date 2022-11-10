@@ -24,10 +24,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-TextEditingController _usuario = TextEditingController();
-TextEditingController _email = TextEditingController();
-TextEditingController _senha = TextEditingController();
-
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
@@ -160,7 +156,7 @@ class _MyHomePageState extends State<MyHomePage> {
         if (value!.isEmpty) {
           return 'Campo vazio';
         }
-        if (value != _email || value != _usuario) {
+        if (value != globalEmail && value != globalUsuario) {
           return 'Email/usuario incorreto';
         }
         return null;
@@ -185,7 +181,7 @@ class _MyHomePageState extends State<MyHomePage> {
         if (value!.isEmpty) {
           return 'Campo vazio';
         }
-        if (value != _senha) {
+        if (value != globalSenha) {
           return 'Senha incorreta';
         }
         return null;

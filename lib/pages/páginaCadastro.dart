@@ -9,12 +9,16 @@ class pagina_cadastro extends StatefulWidget {
   State<pagina_cadastro> createState() => _pagina_cadastroState();
 }
 
-TextEditingController _usuario = TextEditingController();
-TextEditingController _email = TextEditingController();
-TextEditingController _senha = TextEditingController();
+var globalUsuario = "";
+var globalEmail = "";
+var globalSenha = "";
 
 class _pagina_cadastroState extends State<pagina_cadastro> {
   GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
+  TextEditingController _usuario = TextEditingController();
+  TextEditingController _email = TextEditingController();
+  TextEditingController _senha = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -79,6 +83,9 @@ class _pagina_cadastroState extends State<pagina_cadastro> {
                           ),
                           onPressed: () {
                             if (_formKey.currentState!.validate()) {
+                              globalUsuario = _usuario.text;
+                              globalEmail = _email.text;
+                              globalSenha = _senha.text;
                               Navigator.of(context).push(
                                 MaterialPageRoute(
                                     builder: (context) => MyApp()),
@@ -126,6 +133,7 @@ class _pagina_cadastroState extends State<pagina_cadastro> {
   Widget inputsenha() {
     return TextFormField(
       controller: _senha,
+      obscureText: true,
       validator: (value) {
         if (value!.isEmpty) {
           return 'digite a sua senha';

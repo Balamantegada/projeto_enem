@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:projeto_enem/pages/p%C3%A1ginaCadastro.dart';
 import 'package:projeto_enem/pages/p%C3%A1ginaInicial.dart';
-import 'package:projeto_enem/pages/p%C3%A1ginaSobreMim.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,6 +23,10 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+TextEditingController _usuario = TextEditingController();
+TextEditingController _email = TextEditingController();
+TextEditingController _senha = TextEditingController();
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -121,7 +124,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                             Navigator.of(context)
                                                 .push(MaterialPageRoute(
                                               builder: (context) =>
-                                                  pagina_sobre_mim(),
+                                                  pagina_cadastro(),
                                             ))
                                           }),
                                 ],
@@ -157,8 +160,8 @@ class _MyHomePageState extends State<MyHomePage> {
         if (value!.isEmpty) {
           return 'Campo vazio';
         }
-        if (value != "furry@gmail.com") {
-          return 'Email incorreto';
+        if (value != _email || value != _usuario) {
+          return 'Email/usuario incorreto';
         }
         return null;
       },
@@ -182,7 +185,7 @@ class _MyHomePageState extends State<MyHomePage> {
         if (value!.isEmpty) {
           return 'Campo vazio';
         }
-        if (value != "123") {
+        if (value != _senha) {
           return 'Senha incorreta';
         }
         return null;

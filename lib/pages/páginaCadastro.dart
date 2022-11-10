@@ -25,8 +25,8 @@ class _pagina_cadastroState extends State<pagina_cadastro> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Pagina de Cadastro",
-          style: TextStyle(color: Color.fromARGB(255, 32, 178, 170)),
+          "Cadastro",
+          style: TextStyle(color: Colors.white),
         ),
         shadowColor: Color.fromARGB(255, 0, 0, 0),
         centerTitle: true,
@@ -42,61 +42,72 @@ class _pagina_cadastroState extends State<pagina_cadastro> {
                 fit: BoxFit.cover,
               )),
           SingleChildScrollView(
-            child: Center(
-              child: Form(
-                key: _formKey,
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 150, 0, 0),
-                  child: Column(
-                    children: <Widget>[
-                      Text(
-                        'Cadastrar',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 30.0),
+            child: Container(
+              child: Center(
+                child: Form(
+                  key: _formKey,
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 150, 0, 0),
+                    child: Container(
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: Colors.grey[200],
+                        border: Border.all(color: Colors.white),
+                        borderRadius: BorderRadius.circular(12),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
-                      ),
-                      ConstrainedBox(
-                        constraints: BoxConstraints(
-                          maxWidth: 300,
-                          minWidth: 200,
-                        ),
-                        child: Column(children: [
-                          inputnome(),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-                          ),
-                          inputemail(),
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-                          ),
-                          inputsenha(),
-                        ]),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 15, 0, 0),
-                      ),
-                      OutlinedButton(
-                          style: OutlinedButton.styleFrom(
-                            padding: EdgeInsets.fromLTRB(35, 30, 35, 30),
-                          ),
-                          onPressed: () {
-                            if (_formKey.currentState!.validate()) {
-                              globalUsuario = _usuario.text;
-                              globalEmail = _email.text;
-                              globalSenha = _senha.text;
-                              Navigator.of(context).push(
-                                MaterialPageRoute(
-                                    builder: (context) => MyApp()),
-                              );
-                            }
-                          },
-                          child: const Text(
+                      child: Column(
+                        children: <Widget>[
+                          Text(
                             'Cadastrar',
-                            style: TextStyle(fontSize: 20, color: Colors.black),
-                          ))
-                    ],
+                            textAlign: TextAlign.center,
+                            style: TextStyle(fontSize: 30.0),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
+                          ),
+                          ConstrainedBox(
+                            constraints: BoxConstraints(
+                              maxWidth: 300,
+                              minWidth: 200,
+                            ),
+                            child: Column(children: [
+                              inputnome(),
+                              Padding(
+                                padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                              ),
+                              inputemail(),
+                              Padding(
+                                padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                              ),
+                              inputsenha(),
+                            ]),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(0, 15, 0, 0),
+                          ),
+                          OutlinedButton(
+                              style: OutlinedButton.styleFrom(
+                                padding: EdgeInsets.all(20),
+                              ),
+                              onPressed: () {
+                                if (_formKey.currentState!.validate()) {
+                                  globalUsuario = _usuario.text;
+                                  globalEmail = _email.text;
+                                  globalSenha = _senha.text;
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                        builder: (context) => MyApp()),
+                                  );
+                                }
+                              },
+                              child: const Text(
+                                'Cadastrar',
+                                style: TextStyle(
+                                    fontSize: 20, color: Colors.black),
+                              ))
+                        ],
+                      ),
+                    ),
                   ),
                 ),
               ),
@@ -124,7 +135,7 @@ class _pagina_cadastroState extends State<pagina_cadastro> {
         hintText: 'Ex: joão viado',
         contentPadding: EdgeInsetsDirectional.only(
             top: 0.0, bottom: 5.0, start: 5.0, end: 5.0),
-        floatingLabelStyle: TextStyle(fontSize: 15.0),
+        floatingLabelStyle: TextStyle(fontSize: 19.0),
         errorText: null,
       ),
     );
@@ -148,7 +159,7 @@ class _pagina_cadastroState extends State<pagina_cadastro> {
         hintText: 'Ex: joão viado',
         contentPadding: EdgeInsetsDirectional.only(
             top: 0.0, bottom: 5.0, start: 5.0, end: 5.0),
-        floatingLabelStyle: TextStyle(fontSize: 15.0),
+        floatingLabelStyle: TextStyle(fontSize: 19.0),
         errorText: null,
       ),
     );
@@ -171,7 +182,7 @@ class _pagina_cadastroState extends State<pagina_cadastro> {
         hintText: 'Ex: a@gmail',
         contentPadding: EdgeInsetsDirectional.only(
             top: 0.0, bottom: 5.0, start: 5.0, end: 5.0),
-        floatingLabelStyle: TextStyle(fontSize: 15.0),
+        floatingLabelStyle: TextStyle(fontSize: 19.0),
         errorText: null,
       ),
     );

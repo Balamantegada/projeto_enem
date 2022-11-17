@@ -6,6 +6,7 @@ import 'dart:math' as math;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pie_chart/pie_chart.dart';
+import 'package:projeto_enem/pages/matem%C3%A1tica/mainMatriz.dart';
 import 'package:projeto_enem/pages/p%C3%A1ginaSobreMim.dart';
 
 double porcentagemHumanas = 99;
@@ -276,7 +277,13 @@ class _pagina_inicialState extends State<pagina_inicial> {
                         flex: 1,
                         fit: FlexFit.tight,
                         child: ElevatedButton(
-                            onPressed: () => {},
+                            onPressed: () => {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            Main_Matriz_Page()),
+                                  ),
+                                },
                             style: raisedButtonStyle,
                             child: graficoTortaMatematica),
                       ),

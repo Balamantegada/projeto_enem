@@ -6,6 +6,9 @@ import 'dart:math' as math;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pie_chart/pie_chart.dart';
+import 'package:projeto_enem/pages/ci%C3%AAncias%20da%20natureza/main_matriz_ciencias_natureza.dart';
+import 'package:projeto_enem/pages/ci%C3%AAncias%20humanas/Main_Matriz_Humanas.dart';
+import 'package:projeto_enem/pages/linguagens/mainMatriz.dart';
 import 'package:projeto_enem/pages/matem%C3%A1tica/mainMatriz.dart';
 import 'package:projeto_enem/pages/p%C3%A1ginaSobreMim.dart';
 
@@ -294,7 +297,13 @@ class _pagina_inicialState extends State<pagina_inicial> {
                         flex: 1,
                         fit: FlexFit.tight,
                         child: ElevatedButton(
-                            onPressed: () => {},
+                            onPressed: () => {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            Main_Matriz_Humanas()),
+                                  ),
+                                },
                             style: raisedButtonStyle,
                             child: graficoTortaHumanas),
                       ),
@@ -309,7 +318,13 @@ class _pagina_inicialState extends State<pagina_inicial> {
                         flex: 1,
                         fit: FlexFit.tight,
                         child: ElevatedButton(
-                            onPressed: () => {},
+                            onPressed: () => {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            main_matriz_ciencias_natureza()),
+                                  ),
+                                },
                             style: raisedButtonStyle,
                             child: graficoTortaCiencia),
                       ),
@@ -320,7 +335,13 @@ class _pagina_inicialState extends State<pagina_inicial> {
                         flex: 1,
                         fit: FlexFit.tight,
                         child: ElevatedButton(
-                            onPressed: () => {},
+                            onPressed: () => {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            matriz_linguagens_page()),
+                                  ),
+                                },
                             style: raisedButtonStyle,
                             child: graficoTortaLinguagens),
                       ),

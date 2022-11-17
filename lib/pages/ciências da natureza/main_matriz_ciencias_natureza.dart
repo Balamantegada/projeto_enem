@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'comparea1_page.dart';
 import 'comparea2_page.dart';
 import 'package:flutter/material.dart';
@@ -7,20 +9,23 @@ import 'comparea4_page.dart';
 import 'comparea5_page.dart';
 import 'comparea6_page.dart';
 import 'comparea7_page.dart';
+import 'comparea8_page.dart';
 
-class Main_Matriz_Page extends StatefulWidget {
-  const Main_Matriz_Page({super.key});
+class main_matriz_ciencias_natureza extends StatefulWidget {
+  const main_matriz_ciencias_natureza({super.key});
 
   @override
-  State<Main_Matriz_Page> createState() => _Main_Matriz_PageState();
+  State<main_matriz_ciencias_natureza> createState() =>
+      _main_matriz_ciencias_naturezaState();
 }
 
-class _Main_Matriz_PageState extends State<Main_Matriz_Page> {
+class _main_matriz_ciencias_naturezaState
+    extends State<main_matriz_ciencias_natureza> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Matriz de Matematica'),
+        title: Text('Matriz de Ciências da Natureza'),
         backgroundColor: const Color.fromARGB(255, 72, 61, 139),
       ),
       body: SingleChildScrollView(
@@ -35,12 +40,13 @@ class _Main_Matriz_PageState extends State<Main_Matriz_Page> {
               Padding(
                 padding: EdgeInsets.fromLTRB(0, 10, 0, 20),
               ),
-              Text('Matematica', style: TextStyle(fontSize: 25)),
+              Text('Ciências da Natureza e suas Tecnologias',
+                  style: TextStyle(fontSize: 25)),
               Padding(
                 padding: EdgeInsets.fromLTRB(0, 10, 0, 20),
               ),
               criarCompetencia(
-                "Competência de área 1 - Construir significados para os números naturais, inteiros, racionais e reais.",
+                "Competência de área 1 – Compreender as ciências naturais e as tecnologias a elas associadas como construções humanas, percebendo seus papéis nos processos de produção e no desenvolvimento econômico e social da humanidade.",
                 comparea1_page(),
                 context,
               ),
@@ -48,7 +54,7 @@ class _Main_Matriz_PageState extends State<Main_Matriz_Page> {
                 padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
               ),
               criarCompetencia(
-                "Competência de área 2 - Utilizar o conhecimento geométrico para realizar a leitura e a representação da realidade e agir sobre ela.",
+                "Competência de área 2 – Identificar a presença e aplicar as tecnologias associadas às ciências naturais em diferentes contextos.",
                 comparea2_page(),
                 context,
               ),
@@ -56,7 +62,7 @@ class _Main_Matriz_PageState extends State<Main_Matriz_Page> {
                 padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
               ),
               criarCompetencia(
-                "Competência de área 3 - Construir noções de grandezas e medidas para a compreensão da realidade e a solução de problemas do cotidiano.",
+                "Competência de área 3 – Associar intervenções que resultam em degradação ou conservação ambiental a processos produtivos e sociais e a instrumentos ou ações científico-tecnológicos.",
                 comparea3_page(),
                 context,
               ),
@@ -64,7 +70,7 @@ class _Main_Matriz_PageState extends State<Main_Matriz_Page> {
                 padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
               ),
               criarCompetencia(
-                "Competência de área 4 - Construir noções de variação de grandezas para a compreensão da realidade e a solução de problemas do cotidiano.",
+                "Competência de área 4 – Compreender interações entre organismos e ambiente, em particular aquelas relacionadas à saúde humana, relacionando conhecimentos científicos, aspectos culturais e características individuais.",
                 comparea4_page(),
                 context,
               ),
@@ -72,7 +78,7 @@ class _Main_Matriz_PageState extends State<Main_Matriz_Page> {
                 padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
               ),
               criarCompetencia(
-                "Competência de área 5 - Modelar e resolver problemas que envolvem variáveis socioeconômicas ou técnico-científicas, usando representações algébricas.",
+                "Competência de área 5 – Entender métodos e procedimentos próprios das ciências naturais e aplicá-los em diferentes contextos.",
                 comparea5_page(),
                 context,
               ),
@@ -80,7 +86,7 @@ class _Main_Matriz_PageState extends State<Main_Matriz_Page> {
                 padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
               ),
               criarCompetencia(
-                "Competência de área 6 - Interpretar informações de natureza científica e socialobtidas da leitura de gráficos e tabelas, realizando previsão de tendência, extrapolação, interpolação e interpretação.",
+                "Competência de área 6 – Apropriar-se de conhecimentos da física para, em situações problema, interpretar, avaliar ou planejar intervenções científicotecnológicas.",
                 comparea6_page(),
                 context,
               ),
@@ -88,8 +94,16 @@ class _Main_Matriz_PageState extends State<Main_Matriz_Page> {
                 padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
               ),
               criarCompetencia(
-                "Competência de área 7 - Compreender o caráter aleatório e não-determinístico dos fenômenos naturais e sociais e utilizar instrumentos adequados para medidas, determinação de amostras e cálculos de probabilidade para interpretar informações de variáveis apresentadas em uma distribuição estatística.",
+                "Competência de área 7 – Apropriar-se de conhecimentos da química para, em situações problema, interpretar, avaliar ou planejar intervenções científicotecnológicas.",
                 comparea7_page(),
+                context,
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
+              ),
+              criarCompetencia(
+                "Competência de área 8 – Apropriar-se de conhecimentos da biologia para, em situações problema, interpretar, avaliar ou planejar intervenções científicotecnológicas.",
+                comparea8_page(),
                 context,
               ),
               Padding(

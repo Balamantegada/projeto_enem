@@ -1,4 +1,4 @@
-//Código feito pro arthur L. kroenke, Sesi senai Itajai SC, 08/11/2022
+//Código feito por arthur L. kroenke, MArcos Gabriel, Alisson, João e Guilherme, Sesi senai Itajai SC, 17/11/2022
 import 'package:flutter/material.dart';
 import 'package:projeto_enem/pages/p%C3%A1ginaCadastro.dart';
 import 'package:projeto_enem/pages/p%C3%A1ginaInicial.dart';
@@ -106,6 +106,9 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                               child: Row(
                                 children: [
+                                  Padding(
+                                    padding: EdgeInsets.all(5),
+                                  ),
                                   Text(
                                     "Não se cadastrou? ",
                                     style: TextStyle(fontSize: 18),
@@ -149,6 +152,7 @@ class _MyHomePageState extends State<MyHomePage> {
             fontSize: 15.0,
           ),
           labelText: "Email ou usuário",
+          hintText: 'Ex: User 123 ou user@gmail.com',
           labelStyle:
               TextStyle(color: Color.fromARGB(255, 72, 61, 139), fontSize: 30)),
       controller: controleUsuario,
@@ -156,7 +160,7 @@ class _MyHomePageState extends State<MyHomePage> {
         if (value!.isEmpty) {
           return 'Campo vazio';
         }
-        if (value != globalEmail && value != globalUsuario && value != "a") {
+        if (value != globalEmail && value != globalUsuario) {
           return 'Email/usuario incorreto';
         }
         return null;
@@ -174,6 +178,7 @@ class _MyHomePageState extends State<MyHomePage> {
             fontSize: 15.0,
           ),
           labelText: "Senha",
+          hintText: 'Ex: 12312312',
           labelStyle:
               TextStyle(color: Color.fromARGB(255, 43, 0, 160), fontSize: 30)),
       controller: controleSenha,
@@ -181,7 +186,7 @@ class _MyHomePageState extends State<MyHomePage> {
         if (value!.isEmpty) {
           return 'Campo vazio';
         }
-        if (value != globalSenha && value != "a") {
+        if (value != globalSenha) {
           return 'Senha incorreta';
         }
         return null;

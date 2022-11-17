@@ -27,6 +27,7 @@ class _matriz_linguagens_pageState extends State<matriz_linguagens_page> {
         backgroundColor: const Color.fromARGB(255, 72, 61, 139),
       ),
       body: SingleChildScrollView(
+        padding: EdgeInsets.all(20),
         child: Center(
           child: ConstrainedBox(
             constraints: BoxConstraints(

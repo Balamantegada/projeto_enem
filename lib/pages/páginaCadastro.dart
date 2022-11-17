@@ -1,4 +1,4 @@
-//Código feito pro arthur L. kroenke, Sesi senai Itajai SC, 08/11/2022
+//Código feito por arthur L. kroenke, MArcos Gabriel, Alisson, João e Guilherme, Sesi senai Itajai SC, 17/11/2022
 import 'package:flutter/material.dart';
 import 'package:projeto_enem/main.dart';
 
@@ -132,7 +132,7 @@ class _pagina_cadastroState extends State<pagina_cadastro> {
       },
       decoration: InputDecoration(
         labelText: 'nome de usuario',
-        hintText: 'Ex: joão viado',
+        hintText: 'Ex: João Alberto',
         contentPadding: EdgeInsetsDirectional.only(
             top: 0.0, bottom: 5.0, start: 5.0, end: 5.0),
         floatingLabelStyle: TextStyle(fontSize: 19.0),
@@ -156,7 +156,7 @@ class _pagina_cadastroState extends State<pagina_cadastro> {
       },
       decoration: InputDecoration(
         labelText: 'Senha',
-        hintText: 'Ex: joão viado',
+        hintText: 'Ex: j12314sdf32aSD}Ç^^',
         contentPadding: EdgeInsetsDirectional.only(
             top: 0.0, bottom: 5.0, start: 5.0, end: 5.0),
         floatingLabelStyle: TextStyle(fontSize: 19.0),

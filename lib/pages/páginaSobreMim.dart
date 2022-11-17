@@ -1,4 +1,4 @@
-//Código feito pro arthur L. kroenke, Sesi senai Itajai SC, 08/11/2022
+//Código feito por arthur L. kroenke, MArcos Gabriel, Alisson, João e Guilherme, Sesi senai Itajai SC, 17/11/2022
 import 'package:flutter/material.dart';
 
 class pagina_sobre_mim extends StatefulWidget {
@@ -13,7 +13,7 @@ class _pagina_sobre_mimState extends State<pagina_sobre_mim> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Sobre mim"),
+        title: Text("Sobre nós"),
         backgroundColor: Color.fromARGB(255, 249, 178, 76),
       ),
       body: Center(
@@ -56,7 +56,7 @@ class _pagina_sobre_mimState extends State<pagina_sobre_mim> {
                                   color: Colors.white,
                                 ),
                                 Text(
-                                  " Alisson Alves \n-\n Desinger e assistente",
+                                  " Alisson Alves \n-\n Designer e assistente",
                                   style: TextStyle(
                                       fontSize: 25, color: Colors.white),
                                   textAlign: TextAlign.center,

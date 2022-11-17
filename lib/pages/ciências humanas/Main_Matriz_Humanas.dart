@@ -25,6 +25,7 @@ class _Main_Matriz_HumanasState extends State<Main_Matriz_Humanas> {
         backgroundColor: const Color.fromARGB(255, 72, 61, 139),
       ),
       body: SingleChildScrollView(
+        padding: EdgeInsets.all(20),
         child: Center(
           child: ConstrainedBox(
             constraints: BoxConstraints(

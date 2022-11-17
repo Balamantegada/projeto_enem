@@ -1,3 +1,4 @@
+//Código feito por arthur L. kroenke, MArcos Gabriel, Alisson, João e Guilherme, Sesi senai Itajai SC, 17/11/2022
 import 'comparea1_page.dart';
 import 'comparea2_page.dart';
 import 'package:flutter/material.dart';
@@ -24,6 +25,7 @@ class _Main_Matriz_PageState extends State<Main_Matriz_Page> {
         backgroundColor: const Color.fromARGB(255, 72, 61, 139),
       ),
       body: SingleChildScrollView(
+        padding: EdgeInsets.all(20),
         child: Center(
           child: ConstrainedBox(
             constraints: BoxConstraints(

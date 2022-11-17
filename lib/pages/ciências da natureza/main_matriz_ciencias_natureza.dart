@@ -29,6 +29,7 @@ class _main_matriz_ciencias_naturezaState
         backgroundColor: const Color.fromARGB(255, 72, 61, 139),
       ),
       body: SingleChildScrollView(
+        padding: EdgeInsets.all(20),
         child: Center(
           child: ConstrainedBox(
             constraints: BoxConstraints(

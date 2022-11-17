@@ -1,4 +1,4 @@
-//Código feito pro arthur L. kroenke, Sesi senai Itajai SC, 08/11/2022
+//Código feito por arthur L. kroenke, MArcos Gabriel, Alisson, João e Guilherme, Sesi senai Itajai SC, 17/11/2022
 import 'dart:ffi';
 import 'dart:ui';
 import 'package:flutter/material.dart';
@@ -10,6 +10,7 @@ import 'package:projeto_enem/pages/ci%C3%AAncias%20da%20natureza/main_matriz_cie
 import 'package:projeto_enem/pages/ci%C3%AAncias%20humanas/Main_Matriz_Humanas.dart';
 import 'package:projeto_enem/pages/linguagens/mainMatriz.dart';
 import 'package:projeto_enem/pages/matem%C3%A1tica/mainMatriz.dart';
+import 'package:projeto_enem/pages/objetos%20de%20conhecimento/Objetos_conehcimento_page.dart';
 import 'package:projeto_enem/pages/p%C3%A1ginaSobreMim.dart';
 
 double porcentagemHumanas = 99;
@@ -241,8 +242,7 @@ class _pagina_inicialState extends State<pagina_inicial> {
                   padding: EdgeInsets.fromLTRB(0, 0, 230, 0),
                   child: const Text(
                     "Nome do Aluno",
-                    style: TextStyle(
-                        fontSize: 20, color: Color.fromARGB(255, 32, 178, 170)),
+                    style: TextStyle(fontSize: 20),
                   ),
                 ),
                 const Padding(
@@ -250,7 +250,8 @@ class _pagina_inicialState extends State<pagina_inicial> {
                   child: const Text(
                     "Pontuação 150xp",
                     style: TextStyle(
-                        fontSize: 20, color: Color.fromARGB(255, 32, 178, 170)),
+                      fontSize: 20,
+                    ),
                   ),
                 ),
                 const Padding(
@@ -258,7 +259,8 @@ class _pagina_inicialState extends State<pagina_inicial> {
                   child: const Text(
                     "Ranking Escola 150",
                     style: TextStyle(
-                        fontSize: 20, color: Color.fromARGB(255, 32, 178, 170)),
+                      fontSize: 20,
+                    ),
                   ),
                 ),
                 const Padding(
@@ -266,7 +268,8 @@ class _pagina_inicialState extends State<pagina_inicial> {
                   child: const Text(
                     "Ranking Geral 550",
                     style: TextStyle(
-                        fontSize: 20, color: Color.fromARGB(255, 32, 178, 170)),
+                      fontSize: 20,
+                    ),
                   ),
                 ),
                 SizedBox(
@@ -348,33 +351,22 @@ class _pagina_inicialState extends State<pagina_inicial> {
                     ),
                   ],
                 ),
-              ],
-            ),
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 450, 0, 0),
-                child: TextButton(
+                TextButton(
                     child: Text(
-                      "Objetos de Conhecimento",
+                      "Objetos de\nConhecimento",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 32,
                         color: Color.fromARGB(255, 32, 178, 170),
                       ),
                     ),
-                    onPressed: () {}),
-              ),
-            ],
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.fromLTRB(150, 530, 0, 0),
-                child: TextButton(
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                            builder: (context) => Objetos_conehcimento_page()),
+                      );
+                    }),
+                TextButton(
                     child: Text(
                       "Sobre Nós",
                       textAlign: TextAlign.center,
@@ -389,9 +381,9 @@ class _pagina_inicialState extends State<pagina_inicial> {
                             builder: (context) => pagina_sobre_mim()),
                       );
                     }),
-              ),
-            ],
-          )
+              ],
+            ),
+          ),
         ]),
       ),
     );
